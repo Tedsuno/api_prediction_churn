@@ -1,13 +1,14 @@
-import pickle as pk
 import numpy as np
-import pandas
+import pandas as pd
+import joblib
 
 def load_model():
-    with open("../model/model.pkl",'rb') as f :       
-        model=pk.load(f)
+    model = joblib.load("../model/model.pkl")
     return model
 
-def predict_churn(data : dict):
-    df=pandas.DataFrame([data])
-    model=load_model()
-    model.predict(df)
+def predict_churn(data: dict):
+    df = pd.DataFrame([data])
+    model = load_model()
+    prediction = model.predict(df)
+    return {"prediction": prediction[0]}
+

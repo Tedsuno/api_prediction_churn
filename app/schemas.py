@@ -1,4 +1,5 @@
 from pydantic import BaseModel
+from typing import Optional
 
 class ClientData(BaseModel):
     gender: str
@@ -20,4 +21,4 @@ class ClientData(BaseModel):
     PaymentMethod: str
     MonthlyCharges: float
     TotalCharges: float
-    Churn: str
+    Churn: Optional[str] = None
