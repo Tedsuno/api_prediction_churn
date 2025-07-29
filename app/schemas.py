@@ -1,7 +1,8 @@
 from pydantic import BaseModel
 from typing import Optional
 
-# Classe client data qui permet de créer le modèle à partir de BaseModel
+# Classe client data qui permet de créer le modèle à 
+# partir de BaseModel
 
 
 class ClientData(BaseModel):
