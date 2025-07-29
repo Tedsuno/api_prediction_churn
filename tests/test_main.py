@@ -3,6 +3,7 @@ from app.main import app
 
 client = TestClient(app)
 
+
 def test_predict_valid_input():
     payload = {
         "gender": "Male",
@@ -24,7 +25,7 @@ def test_predict_valid_input():
         "PaymentMethod": "Mailed check",
         "MonthlyCharges": 20.15,
         "TotalCharges": 20.15,
-        "Churn": None
+        "Churn": None,
     }
 
     response = client.post("/predict", json=payload)
