@@ -4,6 +4,8 @@ from app.main import app
 client = TestClient(app)
 
 # Test des fonctionnalités avec un échantillon concret
+
+
 def test_predict_valid_input():
     payload = {
         "gender": "Male",
