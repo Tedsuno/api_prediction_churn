@@ -1,8 +1,6 @@
 from fastapi import FastAPI
-from pydantic import BaseModel
-from schemas import ClientData
-from predict import predict_churn
-import pandas as pd
+from app.schemas import ClientData
+from app.predict import predict_churn
 
 app = FastAPI()
 
