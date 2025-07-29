@@ -2,13 +2,13 @@ from fastapi import FastAPI
 from app.schemas import ClientData
 from app.predict import predict_churn
 
-# Utilisation de la bibliothèque FastApi pour créer l'application 
+# Utilisation de la bibliothèque FastApi pour créer l'application
 # pour le modèle
 
 
 app = FastAPI()
 
-# Création de la route predict et de la fonction 
+# Création de la route predict et de la fonction
 
 
 @app.post("/predict")

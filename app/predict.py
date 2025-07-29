@@ -13,7 +13,8 @@ def load_model():
     model = joblib.load(model_path)
     return model
 
-# Fonction qui permet d'utiliser le modèle et de prédire le churn
+# Fonction qui permet d'utiliser le modèle et de
+# prédire le churn
 
 
 def predict_churn(data: dict):
